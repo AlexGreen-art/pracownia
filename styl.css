@@ -1,0 +1,161 @@
+/* Szkliwo — pracownia ceramiki. Strona sprzedaje warsztaty, nie przedmioty. */
+
+:root{
+  --krem:#fbf7f0;
+  --krem-cien:#f2ebe0;
+  --atrament:#211c18;
+  --atrament-jasny:#5c534b;
+  --glina:#c4622d;
+  --musztarda:#e0a33a;
+  --morski:#2e6f6a;
+  --linia:#e0d8ca;
+
+  --display:"Syne",Georgia,serif;
+  --tekst:"Work Sans",system-ui,-apple-system,sans-serif;
+}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--krem);color:var(--atrament);
+  font-family:var(--tekst);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;letter-spacing:-.02em}
+:focus-visible{outline:3px solid var(--glina);outline-offset:3px}
+[id]{scroll-margin-top:74px}
+
+.owijka{width:min(1120px,100% - 44px);margin-inline:auto}
+.waska{width:min(1120px,100% - 44px);margin-inline:auto}
+.waska > *{max-width:720px}
+
+/* ---------- pasek ---------- */
+.pasek{position:sticky;top:0;z-index:30;background:var(--krem);
+  border-bottom:1px solid var(--linia)}
+.pasek-rzad{display:flex;align-items:center;gap:22px;height:62px}
+.znak{font-family:var(--display);font-weight:700;font-size:1.04rem;letter-spacing:.16em;
+  text-transform:uppercase;text-decoration:none;line-height:1.1}
+.znak em{display:block;font:400 .64rem/1 var(--tekst);font-style:normal;letter-spacing:.1em;
+  text-transform:none;color:var(--atrament-jasny);margin-top:4px}
+.pasek nav{margin-left:auto;display:flex;gap:19px;font-size:.89rem}
+.pasek nav a{text-decoration:none;color:var(--atrament-jasny)}
+.pasek nav a:hover{color:var(--glina)}
+.zapisy{background:var(--glina);color:#fff;text-decoration:none;font-weight:600;
+  padding:9px 16px;font-size:.9rem;white-space:nowrap}
+.zapisy:hover{background:#a95324}
+
+/* ---------- siatka prac ---------- */
+.prace{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--linia)}
+.prace figure{margin:0;position:relative;background:var(--krem)}
+.prace .ph{aspect-ratio:1}
+.prace figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:.8rem;
+  color:var(--atrament-jasny);
+  background:linear-gradient(transparent,rgba(251,247,240,.82) 40%,rgba(251,247,240,.96))}
+.prace figcaption b{font-family:var(--display);font-size:.94rem;color:var(--atrament)}
+
+/* ---------- bloki ---------- */
+.blok{padding:clamp(44px,5.5vw,72px) 0}
+.blok-wstep{padding:clamp(34px,4vw,52px) 0 clamp(10px,1.5vw,18px)}
+.blok-cien{background:var(--krem-cien)}
+.blok-ciemny{background:var(--atrament);color:var(--krem)}
+.nadpis{font:600 .68rem/1 var(--tekst);letter-spacing:.24em;text-transform:uppercase;
+  color:var(--glina);margin-bottom:14px}
+.blok-ciemny .nadpis{color:var(--musztarda)}
+.tytul{font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.12;max-width:22ch}
+.wstep{color:var(--atrament-jasny);max-width:60ch;margin-top:12px}
+.blok-ciemny .wstep{color:#bdb3a6}
+
+/* ---------- oferta ---------- */
+.oferta{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.karta{background:var(--krem);border:1px solid var(--linia);display:flex;flex-direction:column}
+.blok-cien .karta{background:#fff}
+.karta .ph{aspect-ratio:3/2}
+.karta-tresc{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.karta h3{font-size:1.2rem}
+.karta p{margin:0;color:var(--atrament-jasny);font-size:.94rem}
+.karta-tresc > p:not(.stopka){min-height:4.6em}
+.karta .stopka{margin-top:auto;padding-top:14px;border-top:1px solid var(--linia);
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.karta .stopka b{font-family:var(--display);font-size:1.15rem}
+.karta .stopka span{font-size:.82rem;color:var(--atrament-jasny)}
+
+/* ---------- cennik: jedna wąska kolumna ---------- */
+.cennik{margin-top:26px}
+.grupa{margin-bottom:26px}
+.grupa h3{font:600 .68rem/1 var(--tekst);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--morski);padding-bottom:8px;border-bottom:2px solid var(--linia)}
+.rzad{display:grid;grid-template-columns:1fr 128px;gap:14px;align-items:start;
+  padding:11px 0;border-bottom:1px solid var(--linia)}
+.rzad span{font-size:.98rem}
+.rzad small{display:block;color:var(--atrament-jasny);font-size:.83rem;line-height:1.4}
+.rzad b{font-family:var(--display);font-weight:700;white-space:nowrap;text-align:right}
+.rzad b em{display:block;font:400 .74rem/1.3 var(--tekst);font-style:normal;
+  color:var(--atrament-jasny);text-align:right}
+
+/* ---------- terminarz: zbity ---------- */
+.terminy{margin-top:24px;border-top:1px solid rgba(255,255,255,.16)}
+.termin{display:grid;grid-template-columns:172px 1fr 76px 152px;gap:16px;align-items:center;
+  padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.data{font-family:var(--display);font-weight:700;font-size:.98rem;white-space:nowrap}
+.data span{font:400 .82rem/1 var(--tekst);color:#9a9086;margin-left:6px}
+.termin h3{font-size:1rem;font-weight:600}
+.cena{font-family:var(--display);font-weight:700;font-size:1rem;white-space:nowrap;text-align:right}
+.miejsca{font-size:.78rem;white-space:nowrap;padding:4px 10px;text-align:center;
+  border:1px solid rgba(255,255,255,.26)}
+.miejsca.malo{border-color:var(--musztarda);color:var(--musztarda)}
+.miejsca.brak{color:#8a8078;border-color:#463e37}
+.terminy-stopka{margin-top:18px;font-size:.88rem;color:#bdb3a6}
+
+/* ---------- jarmarki ---------- */
+.jarmarki{display:grid;gap:0;margin-top:24px;border-top:1px solid var(--linia)}
+.jarmark{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;
+  border-bottom:1px solid var(--linia);align-items:baseline}
+.jarmark b{font-family:var(--display);white-space:nowrap}
+.jarmark span{color:var(--atrament-jasny);font-size:.96rem}
+
+/* ---------- zdjęcia ---------- */
+.ph{position:relative;overflow:hidden;background:var(--krem-cien)}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.brak{background:repeating-linear-gradient(45deg,#e8e0d2 0 10px,#e1d8c9 10px 20px)}
+.ph.brak:after{content:attr(data-opis);position:absolute;inset:0;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:14px;
+  font:600 .72rem/1.45 var(--tekst);letter-spacing:.09em;text-transform:uppercase;color:#7a7168}
+.ph.brak img{display:none}
+.para{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);align-items:start}
+.para > div > p:last-child{margin-bottom:0}
+.para .ph{aspect-ratio:3/2}
+.trojka{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.trojka .ph{aspect-ratio:3/2}
+.podpis{font-size:.81rem;color:var(--atrament-jasny);margin-top:9px}
+.etap{margin:0}
+.etap figcaption{margin-top:9px;font-size:.86rem;color:var(--atrament-jasny)}
+.etap figcaption b{display:block;font-family:var(--display);font-size:.82rem;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--glina);margin-bottom:3px}
+.przyciski{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;background:var(--glina);color:#fff;text-decoration:none;
+  font-weight:600;padding:12px 20px;font-size:.94rem}
+.btn:hover{background:#a95324}
+.btn-obrys{background:none;color:var(--atrament);border:1.5px solid var(--linia)}
+.btn-obrys:hover{background:var(--krem-cien)}
+.blok-ciemny .podpis{color:#9a9086}
+
+/* ---------- kontakt ---------- */
+.dane{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.dane div{border-top:2px solid var(--atrament);padding-top:12px}
+.dane dt{font:600 .66rem/1 var(--tekst);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--atrament-jasny);margin-bottom:7px}
+.dane dd{margin:0;font-size:1.04rem}
+.dane a{text-decoration:none;border-bottom:2px solid var(--musztarda)}
+main > section:last-child{min-height:calc(100vh - 74px);display:flex;align-items:center}
+
+@media(max-width:900px){
+  .oferta,.para,.dane,.trojka{grid-template-columns:1fr}
+  .oferta{max-width:440px}
+  .termin{grid-template-columns:1fr auto;gap:4px 12px}
+  .data{grid-column:1/-1}
+  .jarmark{grid-template-columns:1fr}
+  .pasek nav{display:none}
+  .zapisy{margin-left:auto}
+  .prace{grid-template-columns:repeat(2,1fr)}
+  main > section:last-child{min-height:0;display:block}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
