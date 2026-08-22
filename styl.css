@@ -36,6 +36,7 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;letter-spacing:-.02
 .znak em{display:block;font:400 .64rem/1 var(--tekst);font-style:normal;letter-spacing:.1em;
   text-transform:none;color:var(--atrament-jasny);margin-top:4px}
 .pasek nav{margin-left:auto;display:flex;gap:19px;font-size:.89rem}
+.menu-telefon{display:none}
 .pasek nav a{text-decoration:none;color:var(--atrament-jasny)}
 .pasek nav a:hover{color:var(--glina)}
 .zapisy{background:var(--glina);color:#fff;text-decoration:none;font-weight:600;
@@ -49,7 +50,7 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;letter-spacing:-.02
 .prace figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;
   display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:.8rem;
   color:var(--atrament-jasny);
-  background:linear-gradient(transparent,rgba(251,247,240,.82) 40%,rgba(251,247,240,.96))}
+  background:linear-gradient(transparent,rgba(251,247,240,.92) 38%,rgba(251,247,240,.99))}
 .prace figcaption b{font-family:var(--display);font-size:.94rem;color:var(--atrament)}
 
 /* ---------- bloki ---------- */
@@ -155,6 +156,13 @@ main > section:last-child{min-height:calc(100vh - 74px);display:flex;align-items
   .jarmark{grid-template-columns:1fr}
   .pasek nav{display:none}
   .zapisy{margin-left:auto}
+  .prace figcaption{flex-direction:column;align-items:flex-start;gap:2px;padding:30px 12px 11px}
+  .prace figcaption b{font-size:.98rem;line-height:1.15}
+  .prace figcaption span{font-size:.78rem}
+  .pasek-rzad{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px 14px}
+  .menu-telefon{display:flex;width:100%;order:3;gap:16px;overflow-x:auto;
+    font-size:.85rem;padding-bottom:2px}
+  .menu-telefon a{text-decoration:none;color:var(--atrament-jasny);white-space:nowrap}
   .prace{grid-template-columns:repeat(2,1fr)}
   main > section:last-child{min-height:0;display:block}
 }
