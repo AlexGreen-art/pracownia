@@ -159,10 +159,11 @@ main > section:last-child{min-height:calc(100vh - 74px);display:flex;align-items
   .prace figcaption{flex-direction:column;align-items:flex-start;gap:2px;padding:30px 12px 11px}
   .prace figcaption b{font-size:.98rem;line-height:1.15}
   .prace figcaption span{font-size:.78rem}
-  .pasek-rzad{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px 14px}
-  .menu-telefon{display:flex;gap:16px;overflow-x:auto;
-    font-size:.85rem;padding:8px 0 10px;border-top:1px solid var(--linia)}
+  .pasek-rzad{height:62px}
+  .menu-telefon{display:flex;align-items:center;height:44px;gap:16px;overflow-x:auto;
+    font-size:.85rem;border-top:1px solid var(--linia)}
   .menu-telefon a{text-decoration:none;color:var(--atrament-jasny);white-space:nowrap}
+  [id]{scroll-margin-top:118px}
   .prace{grid-template-columns:repeat(2,1fr)}
   main > section:last-child{min-height:0;display:block}
 }
