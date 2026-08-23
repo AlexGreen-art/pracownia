@@ -35,10 +35,10 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;letter-spacing:-.02
   text-transform:uppercase;text-decoration:none;line-height:1.1}
 .znak em{display:block;font:400 .64rem/1 var(--tekst);font-style:normal;letter-spacing:.1em;
   text-transform:none;color:var(--atrament-jasny);margin-top:4px}
-.pasek nav{margin-left:auto;display:flex;gap:19px;font-size:.89rem}
+.nav-desktop{margin-left:auto;display:flex;gap:19px;font-size:.89rem}
 .menu-telefon{display:none}
-.pasek nav a{text-decoration:none;color:var(--atrament-jasny)}
-.pasek nav a:hover{color:var(--glina)}
+.nav-desktop a{text-decoration:none;color:var(--atrament-jasny)}
+.nav-desktop a:hover{color:var(--glina)}
 .zapisy{background:var(--glina);color:#fff;text-decoration:none;font-weight:600;
   padding:9px 16px;font-size:.9rem;white-space:nowrap}
 .zapisy:hover{background:#a95324}
@@ -154,7 +154,7 @@ main > section:last-child{min-height:calc(100vh - 74px);display:flex;align-items
   .termin{grid-template-columns:1fr auto;gap:4px 12px}
   .data{grid-column:1/-1}
   .jarmark{grid-template-columns:1fr}
-  .pasek nav{display:none}
+  .nav-desktop{display:none}
   .zapisy{margin-left:auto}
   .prace figcaption{flex-direction:column;align-items:flex-start;gap:2px;padding:30px 12px 11px}
   .prace figcaption b{font-size:.98rem;line-height:1.15}
