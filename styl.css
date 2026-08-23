@@ -163,7 +163,7 @@ main > section:last-child{min-height:calc(100vh - 74px);display:flex;align-items
   .menu-telefon{display:flex;align-items:center;height:44px;gap:16px;overflow-x:auto;
     font-size:.85rem;border-top:1px solid var(--linia)}
   .menu-telefon a{text-decoration:none;color:var(--atrament-jasny);white-space:nowrap}
-  [id]{scroll-margin-top:118px}
+  [id]{scroll-margin-top:108px}
   .prace{grid-template-columns:repeat(2,1fr)}
   main > section:last-child{min-height:0;display:block}
 }
