@@ -94,7 +94,7 @@ h1,h2,h3{margin:0;font-family:var(--display);font-weight:700;letter-spacing:-.02
 
 /* ---------- terminarz: zbity ---------- */
 .terminy{margin-top:24px;border-top:1px solid rgba(255,255,255,.16)}
-.termin{display:grid;grid-template-columns:172px 1fr 76px 152px;gap:16px;align-items:center;
+.termin{display:grid;grid-template-columns:max-content 1fr 76px 152px;gap:16px;align-items:center;
   padding:12px 0;border-bottom:1px solid rgba(255,255,255,.16)}
 .data{font-family:var(--display);font-weight:700;font-size:.98rem;white-space:nowrap}
 .data span{font:400 .82rem/1 var(--tekst);color:#9a9086;margin-left:6px}
